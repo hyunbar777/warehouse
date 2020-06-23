@@ -7,7 +7,7 @@ else
 cmd=jps
 fi
 
-for host in `cat $1` ; do
-    echo ========================= $host ==========================
+for host in hadoop100 hadoop101 hadoop102; do
+     echo ============================================  $host ============================================
     ssh $host "source /etc/profile; $cmd"
 done
