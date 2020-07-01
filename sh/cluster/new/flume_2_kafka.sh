@@ -1,11 +1,11 @@
 #!/bin/bash
 
-FLUME_HOME="/opt/module/flume-1.7.0"
+FLUME_HOME="/opt/module/flume-1.9.0"
 case $1 in
    start)
         for host in hadoop100 hadoop101; do
            echo ============================================  $host 启动日志采集 ============================================
-            ssh $host "nohup $FLUME_HOME/bin/flume-ng agent --conf-file /opt/module/flume-1.7.0/data/file-kafka.conf --name a1 -Dflume.root.logger=INFO,LOGFILE >$FLUME_HOME/logs/flume_start.log 2>&1 &"
+            ssh $host "nohup $FLUME_HOME/bin/flume-ng agent --conf-file $FLUME_HOME/data/file-kafka.conf --name a1 -Dflume.root.logger=INFO,CONSOLE >$FLUME_HOME/logs/flume_2_kafka.log 2>&1 &"
         done
 
    ;;

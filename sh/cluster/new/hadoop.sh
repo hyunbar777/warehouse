@@ -7,7 +7,8 @@ case $1 in
    echo ============================================  hadoop101 启动YARN ============================================
    ssh hadoop101 "source /etc/profile;$HADOOP_HOME/sbin/start-yarn.sh"
    echo ==========================================  hadoop102 启动历史服务器 ==========================================
-   ssh hadoop102 "source /etc/profile;$HADOOP_HOME/sbin/mr-jobhistory-daemon.sh start historyserver"
+    ssh hadoop102 "source /etc/profile;$HADOOP_HOME/bin/mapred --daemon start historyserver"
+  # ssh hadoop102 "source /etc/profile;$HADOOP_HOME/sbin/mr-jobhistory-daemon.sh start historyserver"
    ;;
    stop)
         echo ============================================  hadoop100 停止HDFS ============================================
@@ -15,7 +16,8 @@ case $1 in
         echo ============================================  hadoop101 停止YARN ============================================
         ssh hadoop101 "source /etc/profile;$HADOOP_HOME/sbin/stop-yarn.sh"
         echo ==========================================  hadoop102 停止历史服务器 ==========================================
-        ssh hadoop102 "source /etc/profile;$HADOOP_HOME/sbin/mapred --daemon start historyserver"
+       # ssh hadoop102 "source /etc/profile;$HADOOP_HOME/sbin/mr-jobhistory-daemon.sh stop historyserver"
+          ssh hadoop102 "source /etc/profile;$HADOOP_HOME/bin/mapred --daemon stop historyserver"
    ;;
    *)
    echo "你输入的姿势不对，请重新输入！"
