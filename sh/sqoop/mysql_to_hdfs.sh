@@ -77,7 +77,7 @@ import_activity_order(){
 }
 
 import_user_info(){
-  import_data "user_info" "select
+  import_data user_info "select
                             id,
                             name,
                             birthday,

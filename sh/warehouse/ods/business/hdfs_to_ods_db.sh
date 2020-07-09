@@ -65,7 +65,7 @@ load data inpath '/origin_data/$APP/db/base_province/$do_date' OVERWRITE into ta
 
 load data inpath '/origin_data/$APP/db/base_region/$do_date' OVERWRITE into table ${APP}.ods_base_region;
 "
-case $1 in
+case $2 in
 "first"){
     $hive -e "$sql1"
     $hive -e "$sql2"
