@@ -12,5 +12,6 @@
     <modules>
         <module>log-collector</module>
         <module>flume-intercepter</module>
+        <module>hivefunc</module>
     </modules>
 </project>
