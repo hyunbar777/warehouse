@@ -1,0 +1,2 @@
+type=command
+command=/home/duoduo/bin/warehouse/mysql_to_hdfs.sh ${dt}

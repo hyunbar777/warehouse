@@ -1,0 +1,2 @@
+type=command
+command=/home/duoduo/bin/warehouse/hdfs_to_ods_log.sh ${dt}

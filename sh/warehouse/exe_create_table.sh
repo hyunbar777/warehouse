@@ -3,7 +3,7 @@
 # 定义变量
 db=gmall
 home=/home/duoduo/bin/batch_create_table
-hive=/opt/module/hive-3.1.2/bin/hive
+hive=/opt/module/hive/bin/hive
 tmp=/home/duoduo/bin
 if [ -f $tmp/tmp.tmp ]
 then
@@ -25,6 +25,7 @@ do
         #echo "name=$name"
         echo "use $db;" >> "$tmp/tmp.tmp"
         echo  `cat $path` >> "$tmp/tmp.tmp"
+        echo "msck repair table $name;" >> "$tmp/tmp.tmp"
 
     fi
 done

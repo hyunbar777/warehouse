@@ -1,0 +1,3 @@
+type=command
+command=/home/duoduo/bin/warehouse/hdfs_to_ods_db.sh ${dt}
+dependencies=mysql_to_hdfs

@@ -1,0 +1,3 @@
+type=command
+command=/home/duoduo/bin/warehouse/ods_to_dwd_log.sh ${dt}
+dependencies=hdfs_to_ods_log
